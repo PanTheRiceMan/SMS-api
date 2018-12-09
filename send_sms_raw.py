@@ -119,38 +119,7 @@ class SMSInterface():
     
     def _get_sms_from(self, itype = 2, nPageNum=1, nNumberMessagesPerPage=1000):
         """
-        Function: GetSMSMessages
-        Description: get sms messages information
-        Parameters:
-            [IN] : number : nMessageStoreType, you can select following value:
-            type : meaning
-     
-        NOTE: THESE NUMBERS ARE DIFFERENT FROM GetSMSCount.  SORRY!
-        
-        1 : 'local inbox'
-        2 : 'local outbox'
-        3 : 'local draftbox'
-        4 : 'local dustbin' //ignore this type for current version.
-        5 : 'SIM inbox'
-        6 : 'SIM outbox'
-        7 : 'SIM draftbox'
-        [IN] : number : nPageNum : SMS UI page index.
-        [IN] : number : nNumberMessagesPerPage : an page read count, the value can between [1, 50].
-        [IN] : function : callback(listMessagesJSON, bResult) : callback function
-        [IN] : object : listMessagesJSON : message JSON object list. Each message JSON object contains all messages information as below.
-        if failed, we will return null.
-        an message JSON object such as vMessagesJSON, this vMessagesJSON.messages[0]. its attributes lists below :
-       
-        type : atrributes : Description : such as
-        string : id : sms Index : '1'
-        string : date : Year/month/day : '13/05/10'
-        string : time : hours : '14:00'
-        string : from : ministry people phone : '+447864629574'
-        string : body : sms content : 'Hi James!'
-        bool : isNew : if isNew=true the sms is New, otherwise the sms is Old
-       
-        [IN] : bool : bResult : true = succeed , false = failed
-        return: bool : true = function execute succeed, false = parameters is invalid
+        For further documentation see GetSMSMessages from the webinterface.
         """
         if itype in [1,5]:
             tag = 12
